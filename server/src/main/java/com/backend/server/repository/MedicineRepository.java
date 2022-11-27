@@ -13,8 +13,8 @@ import com.backend.server.models.MedicineModel;
 
 public interface MedicineRepository  extends CrudRepository<MedicineModel, String>{
 
-    @Query(value = "SELECT * FROM news WHERE id = ?1", nativeQuery = true)
-    MedicineModel findByNews_id(String id);
+    @Query(value = "SELECT * FROM medicine WHERE medicine_id = ?1", nativeQuery = true)
+    MedicineModel findByMedicine_id(String id);
 
     @Query(value = "select * from medicine", nativeQuery = true)
     Iterable<MedicineModel> findAll();
@@ -26,7 +26,7 @@ public interface MedicineRepository  extends CrudRepository<MedicineModel, Strin
 
     @Modifying
     @Transactional
-    @Query(value = "delete from medicine where id = ?1", nativeQuery = true)
+    @Query(value = "delete from medicine where medicine_id = ?1", nativeQuery = true)
     void deleteByNews_id(String id);
 
     @Modifying

@@ -35,7 +35,7 @@ public class MedicineController {
 
     @GetMapping(value="/medicine/{id}")
     public MedicineModel getNewsById(@PathVariable("id") String id) {
-        return medicineRepository.findByNews_id(id);
+        return medicineRepository.findByMedicine_id(id);
     }
 
     @PostMapping(value="/medicine")
