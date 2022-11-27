@@ -1,0 +1,52 @@
+method: post
+/api/register
+todo: create users
+
+method: post
+/api/login
+todo: login
+
+======================================================
+
+method: get
+/api/medicine
+todo: get all medicine
+
+method: get
+/api/medicine/{id}
+todo: get medicine by id
+
+method: post
+/api/medicine
+todo: create medicine
+
+method: put
+/api/medicine/{id}
+todo: update medicine
+
+method: delete
+/api/medicine/{id}
+todo: delete medicine
+
+======================================================
+
+method: get
+/api/news
+todo: get all news
+
+method: get
+/api/news/{id}
+todo: get news by id
+
+method: post
+/api/news
+todo: create news
+
+method: put
+/api/news/{id}
+todo: update news
+
+method: delete
+/api/news/{id}
+todo: delete news
+
