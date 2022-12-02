@@ -16,7 +16,7 @@ public interface MedicineRepository  extends CrudRepository<MedicineModel, Strin
     @Query(value = "SELECT * FROM medicine WHERE medicine_id = ?1", nativeQuery = true)
     MedicineModel findByMedicine_id(String id);
 
-    @Query(value = "select * from medicine", nativeQuery = true)
+    @Query(value = "select * from medicine order by created_at desc", nativeQuery = true)
     Iterable<MedicineModel> findAll();
 
     @Modifying

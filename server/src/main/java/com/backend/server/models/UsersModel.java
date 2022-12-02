@@ -22,9 +22,6 @@ public class UsersModel {
     @Id
     private String user_id;
 
-    @Column
-    private String username;
-
     @Column(nullable = false, unique = true)
     private String email;
 
