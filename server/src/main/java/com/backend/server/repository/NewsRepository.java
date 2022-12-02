@@ -13,6 +13,10 @@ import com.backend.server.models.NewsModel;
 
 public interface NewsRepository extends CrudRepository<NewsModel, String> {
 
+
+    @Query(value = "select * from news order by created_at desc", nativeQuery = true)
+    Iterable<NewsModel> findAllNews();
+
     @Query(value = "SELECT * FROM news WHERE news_id = ?1", nativeQuery = true)
     NewsModel findByNews_id(String id);
 
@@ -23,7 +27,7 @@ public interface NewsRepository extends CrudRepository<NewsModel, String> {
 
     @Modifying
     @Transactional
-    @Query(value = "delete from news where id = ?1", nativeQuery = true)
+    @Query(value = "delete from news where news_id = ?1", nativeQuery = true)
     void deleteByNews_id(String id);
 
     @Modifying
